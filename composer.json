@@ -1,0 +1,41 @@
+{
+    "name": "adminui/adminui-address",
+    "description": "A private package for Admin UI address lookup from GetAddress.io",
+    "type": "laravel",
+    "license": "Private",
+    "authors": [
+        {
+            "name": "kennyturner",
+            "email": "kennyturner@ntlworld.co.uk"
+        }
+    ],
+    "require":{
+        "php": ">=7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "AdminUI\\AdminUIAddress\\": "src"
+        }
+    },
+
+    "scripts": {
+        "post-autoload-dump": [
+            "@php artisan route:list"
+        ]
+    },
+
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "AdminUI\\AdminUIAddress\\AdminUIAddressServiceProvider"
+            ],
+            "aliases": {
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
