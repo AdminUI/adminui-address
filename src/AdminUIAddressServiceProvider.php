@@ -1,11 +1,11 @@
 <?php
 namespace AdminUI\AdminUIAddress;
 
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 use View;
+use AdminUI\Framework\Provider;
 
-class AdminUIServiceProvider extends ServiceProvider
+class AdminUIAddressServiceProvider extends Provider
 {
     public $viewPrefix = 'auiaddress';
     public $dir        = __DIR__;
@@ -27,6 +27,6 @@ class AdminUIServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
+        $this->loadMigrationsFrom($this->dir.'/Database/Migrations');
     }
 }
