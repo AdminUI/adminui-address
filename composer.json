@@ -31,9 +31,7 @@
         "laravel": {
             "providers": [
                 "AdminUI\\AdminUIAddress\\AdminUIAddressServiceProvider"
-            ],
-            "aliases": {
-            }
+            ]
         }
     },
     "minimum-stability": "dev",

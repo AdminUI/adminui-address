@@ -1,8 +1,6 @@
 <?php
 namespace AdminUI\AdminUIAddress;
 
-use Illuminate\Support\Facades\Schema;
-use View;
 use AdminUI\Framework\Provider;
 
 class AdminUIAddressServiceProvider extends Provider
@@ -16,8 +14,9 @@ class AdminUIAddressServiceProvider extends Provider
      *
      * @return void
      */
-    public function boot(\Illuminate\Routing\Router $router)
+    public function _boot(\Illuminate\Routing\Router $router)
     {
+
     }
 
     /**
@@ -25,7 +24,7 @@ class AdminUIAddressServiceProvider extends Provider
      *
      * @return void
      */
-    public function register()
+    public function _register()
     {
         $this->loadMigrationsFrom($this->dir.'/Database/Migrations');
     }

@@ -2,14 +2,10 @@
 namespace AdminUI\AdminUIAddress\Api;
 
 use App\Http\Controllers\Controller;
+use AdminUI\AdminUIAddress\Helpers\Address;
+
 /**
  * A api request to return via php from GetAddress.io
- * Ensure to include the .env file
- * GETADDRESS_API_KEY=dksiAXAn00mJYTfjyCKFNA16164
- * GETADDRESS_ADMIN_KEY=sZ3yX699Q0qI_UkZI-PVXg16164
- *
- * LNG=-1.9181377
- * LAT=50.8115552
  */
 class AddressApiController extends Controller
 {
@@ -20,11 +16,16 @@ class AddressApiController extends Controller
      */
     public function lookup()
     {
+        // strip any spaces from postcode
         $postcode = str_replace(' ', '', request('postcode'));
 
-        $results = cache()->remember('address.'.$postcode, '604800', function () use ($postcode) {
-            return get_address()->expand()->find($postcode);
+        // do api request and cache the results
+        $response = cache()->remember('address'.$postcode, '604800', function() use ($postcode) {
+            $address = new Address();
+            return $address->find($postcode, false, true);
         });
-        return response()->json($results->respond());
+
+        // return the response
+        return response()->json($response);
     }
 }
