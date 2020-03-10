@@ -65,7 +65,7 @@ This will take 3 parameters:<br>
 Distance is returned.
 
 Credit given to : <br>
-## [altrozero/](https://packagist.org/packages/altrozero/)get-address-io-php
+[altrozero/](https://packagist.org/packages/altrozero/)get-address-io-php<br>
 for some of the coding structure.
 
 **Still to come:**<br>
