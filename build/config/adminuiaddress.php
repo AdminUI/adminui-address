@@ -14,4 +14,4 @@ return [
 
     // Default Latitude to calculate against distance
     'lat' => env('AUI_ADDRESS_LAT', '51.5074')
-]
+];
