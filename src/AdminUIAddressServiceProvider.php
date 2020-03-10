@@ -1,14 +1,11 @@
 <?php
 namespace AdminUI\AdminUIAddress;
 
-use AdminUI\Framework\Provider;
+use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema;
 
-class AdminUIAddressServiceProvider extends Provider
+class AdminUIAddressServiceProvider extends ServiceProvider
 {
-    public $viewPrefix = 'auiaddress';
-    public $dir        = __DIR__;
-    public $namespace  = __NAMESPACE__;
-
     /**
      * Bootstrap the application services.
      *
@@ -16,7 +13,13 @@ class AdminUIAddressServiceProvider extends Provider
      */
     public function _boot(\Illuminate\Routing\Router $router)
     {
+        // set schema length to prevent errors on old mysql
+        Schema::defaultStringLength(255);
 
+        // load view aliases
+        if (file_exists(__DIR__.'/Views/aliases.php')) {
+            require(__DIR__.'/Views/aliases.php');
+        }
     }
 
     /**
@@ -26,6 +29,33 @@ class AdminUIAddressServiceProvider extends Provider
      */
     public function _register()
     {
+        $this->publish();
+        $this->migrate();
+        $this->routes();
+        $this->views();
+    }
+
+    public function publish()
+    {
+        $this->publishes([
+            __DIR__.'/../build/config/adminuiaddress.php' => config_path('adminuiaddress.php'),
+        ], 'adminui-address');
+    }
+
+    public function migrate()
+    {
         $this->loadMigrationsFrom($this->dir.'/Database/Migrations');
+    }
+
+    public function routes()
+    {
+        $this->loadRoutesFrom(__DIR__.'/Routes/web.php');
+        $this->loadRoutesFrom(__DIR__.'/Routes/api.php');
+    }
+
+    public function views()
+    {
+        $this->loadViewsFrom(__DIR__.'/Views', 'auiaddressviews');
+        $this->loadViewsFrom(__DIR__.'/Views/Components', 'auiaddresscomponents');
     }
 }
