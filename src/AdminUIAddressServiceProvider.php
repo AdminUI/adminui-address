@@ -46,7 +46,7 @@ class AdminUIAddressServiceProvider extends ServiceProvider
 
     public function migrate()
     {
-        $this->loadMigrationsFrom($this->dir.'/Database/Migrations');
+        $this->loadMigrationsFrom(__DIR__.'/Database/Migrations');
     }
 
     public function routes()

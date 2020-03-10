@@ -1,5 +1,5 @@
 @php
-$countries = AdminUI\AdminUI\Models\Country::options();
+$countries = AdminUI\AdminUIAddress\Models\Country::options();
 @endphp
 
 <div class="address-block">

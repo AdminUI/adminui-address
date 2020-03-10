@@ -1,5 +1,5 @@
 <?php
-namespace Southcoastweb\AdminUI\Database\Seeds;
+namespace AdminUI\AdminUIAddress\Database\Seeds;
 
 use Illuminate\Database\Seeder;
 
