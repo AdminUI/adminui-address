@@ -18,7 +18,7 @@ class AdminUIAddressServiceProvider extends ServiceProvider
 
         // load view aliases
         if (file_exists(__DIR__.'/Views/aliases.php')) {
-            require(__DIR__.'/Views/aliases.php');
+            include(__DIR__.'/Views/aliases.php');
         }
     }
 
@@ -38,8 +38,10 @@ class AdminUIAddressServiceProvider extends ServiceProvider
     public function publish()
     {
         $this->publishes([
-            __DIR__.'/../build/config/adminuiaddress.php' => config_path('adminuiaddress.php'),
-        ], 'adminui-address');
+                __DIR__.'/../build/config/adminuiaddress.php' => config_path('adminuiaddress.php')
+            ],
+            'adminui-address'
+        );
     }
 
     public function migrate()
