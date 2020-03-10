@@ -2,7 +2,7 @@
     "name": "adminui/adminui-address",
     "description": "A package for Admin UI address lookup from GetAddress.io",
     "type": "laravel",
-    "license": "MIT License",
+    "license": "MIT",
     "authors": [
         {
             "name": "kennyturner",
