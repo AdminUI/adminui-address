@@ -3,6 +3,7 @@ namespace AdminUI\AdminUIAddress;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\Blade;
 
 class AdminUIAddressServiceProvider extends ServiceProvider
 {
@@ -11,15 +12,13 @@ class AdminUIAddressServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function _boot(\Illuminate\Routing\Router $router)
+    public function boot(\Illuminate\Routing\Router $router)
     {
         // set schema length to prevent errors on old mysql
         Schema::defaultStringLength(255);
 
         // load view aliases
-        if (file_exists(__DIR__.'/Views/aliases.php')) {
-            include(__DIR__.'/Views/aliases.php');
-        }
+        Blade::include('components.address-block', 'addressBlock');
     }
 
     /**
@@ -27,7 +26,7 @@ class AdminUIAddressServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function _register()
+    public function register()
     {
         $this->publish();
         $this->migrate();
@@ -38,7 +37,8 @@ class AdminUIAddressServiceProvider extends ServiceProvider
     public function publish()
     {
         $this->publishes([
-                __DIR__.'/../build/config/adminuiaddress.php' => config_path('adminuiaddress.php')
+                __DIR__.'/../build/config/adminuiaddress.php' => config_path('adminuiaddress.php'),
+                __DIR__.'/../build/components' => resource_path('views/components')
             ],
             'adminui-address'
         );

@@ -1,15 +1,36 @@
 @php
-$countries = AdminUI\AdminUIAddress\Models\Country::options();
+$countries = AdminUI\AdminUIAddress\Models\Country::all();
 @endphp
-
 <div class="address-block">
-    {!! Form::auiSelect('country_id', $countries, old('country_id', 222),  ['class' => 'country-lookup'], 'Country') !!}
-    {!! Form::auiText('phone', old('phone', ''), [], 'Phone') !!}
+    <div class="form-group">
+        <label for="Country" class="control-label">Country</label><br/>
+        <select class="custom-select form-control country-lookup" name="country_id">
+            @foreach ($countries as $country)
+                @php
+                if ($country->id == old('country', 222)) {
+                    $selected = 'selected="selected"';
+                }
+                @endphp
+                <option value="{{ $country->id }}" data-postcode="{{ $country->postcode }}" {{ $selected }}>
+                    {{ $country->name }}
+                </option>
+            @endforeach
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Phone" class="control-label">Phone</label>
+        <input class="form-control" name="phone" type="text" value="{{ old('phone', '') }}">
+    </div>
 
     <div class="row lookup-block">
         <div class="col-sm-6">
-            {!! Form::auiText('postcode', old('postcode', ''), ['class' => 'postcode upperCase'], 'Post Code' ) !!}
+            <div class="form-group">
+                <label for="Post Code" class="control-label">Post Code</label>
+                <input class="form-control postcode upperCase" name="postcode" type="text" value="{{ old('postcode', '') }}">
+            </div>
         </div>
+
         <div class="col-sm-3">
             <label>&nbsp;</label>
             <button type="button" class="postcode-lookup btn btn-block btn-outline-success">Lookup</button>
@@ -21,18 +42,38 @@ $countries = AdminUI\AdminUIAddress\Models\Country::options();
     </div>
 
     <div class="address-select">
-        {!! Form::auiSelect('lookup', ['' => 'Please Choose'], '', ['class' => 'address-select-pick'], 'Choose Address') !!}
+        <div class="form-group">
+            <label for="Choose Address" class="control-label">Choose Address</label><br/>
+            <select class="custom-select form-control address-select-pick" style="width:100%" name="lookup">
+                <option value="" selected="selected">Please Choose</option>
+            </select>
+        </div>
     </div>
 
     <div class="main-address-block">
-        {!! Form::auiText('address', old('address', ''), ['class' => 'address_field'], 'Address') !!}
-        {!! Form::auiText('address_2', old('address_2', ''), ['class' => 'address_2_field'], 'Address 2') !!}
-        {!! Form::auiText('town', old('town', ''), ['class' => 'town_field'], 'Town') !!}
-        {!! Form::auiText('county', old('county', ''), ['class' => 'county_field'], 'County') !!}
-        {!! Form::auiText('postcode', old('postcode', ''), ['class' => 'address-postcode upperCase'], 'Postcode') !!}
-        {{-- {!! Form::auiText('distance', old('distance', ''), [], 'Distance') !!} --}}
-        <input type="hidden" name="lng" class="lng_field" />
-        <input type="hidden" name="lat" class="lat_field" />
+        <div class="form-group">
+            <label for="Address" class="control-label">Address</label>
+            <input class="form-control address_field" name="address" type="text" value="{{ old('address', '') }}">
+        </div>
+        <div class="form-group">
+            <label for="Address 2" class="control-label">Address 2</label>
+            <input class="form-control address_2_field" name="address_2" type="text" value="{{ old('address_2', '') }}">
+        </div>
+        <div class="form-group">
+            <label for="Town" class="control-label">Town</label>
+            <input class="form-control town_field" name="town" type="text" value="{{ old('town', '') }}">
+        </div>
+        <div class="form-group">
+            <label for="County" class="control-label">County</label>
+            <input class="form-control county_field" name="county" type="text" value="{{ old('county', '') }}">
+        </div>
+        <div class="form-group">
+            <label for="Postcode" class="control-label">Postcode</label>
+            <input class="form-control address-postcode upperCase" name="postcode" type="text" value="{{ old('postcode', '') }}">
+        </div>
+
+        <input type="hidden" name="lng" class="lng_field" value="{{ old('lng', '') }}">
+        <input type="hidden" name="lat" class="lat_field" value="{{ old('lat', '') }}">
     </div>
 </div>
 
