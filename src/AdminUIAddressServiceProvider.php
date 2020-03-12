@@ -18,7 +18,7 @@ class AdminUIAddressServiceProvider extends ServiceProvider
         Schema::defaultStringLength(255);
 
         // load view aliases
-        Blade::include('components.address-block', 'addressBlock');
+        Blade::include('components.addressBlock', 'addressBlock');
     }
 
     /**
