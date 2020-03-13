@@ -1,15 +1,16 @@
 <?php
-namespace AdminUI\AdminUIAddress\Helpers;
+namespace AdminUI\AdminUIAddress\Classes;
 
 // Laravel 7 Http helper
 use Illuminate\Support\Facades\Http;
+use AdminUI\AdminUIAddress\Facades\Address;
 /**
  * Helper Class to help with getAddress.io
  * This is a rewritten version of
  * https://github.com/Altrozero/get-address-io-php
  * for Laravel 7
  */
-class Address
+class GetAddress extends Address
 {
     // default address
     const URL = 'https://api.getAddress.io';

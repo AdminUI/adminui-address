@@ -37,7 +37,7 @@ $countries = AdminUI\AdminUIAddress\Models\Country::all();
         </div>
         <div class="col-sm-3">
             <label>&nbsp;</label>
-            <button type="button" class="postcode-manual btn btn-block btn-outline-warning">Manually Add</button>
+            <button type="button" class="postcode-manual btn btn-block btn-outline-warning">Manual</button>
         </div>
     </div>
 

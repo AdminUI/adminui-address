@@ -1,36 +1,43 @@
 <?php
-namespace AdminUI\AdminUIAddress\Helpers;
+namespace AdminUI\AdminUIAddress\Classes;
 
 /**
  * Helper Class to help with distances
  */
 class Distance
 {
+    private $lat;
+
+    private $lng;
+
+    public function __construct($lat, $lng) {
+        $this->lat = $lat ?? config('adminuiaddress.lat');
+        $this->lng = $lng ?? config('adminuiaddress.lng');
+    }
+
     /**
-     * DIstance calculation
+     * Distance calculation
      *
      * @param array $to - array conatining lng and lat
      * @param array $from - array containing lng and lat or fallback to .env
      * @param string $unit - Measurement Unit - km - Kilometers, nm - Nautical Miles, m - miles
      * @return float $distance - measurement result
      */
-    public static function between($to, $from = false, $unit = 'm')
+    public function between($to, $unit = 'm')
     {
         // pull the variables for ease
         $lngTo   = $to['lng'];
-        $lngFrom = $from['lng'] ?? env('LNG', 0);
         $latTo   = $to['lat'];
-        $latFrom = $from['lat'] ?? env('LAT', 0);
 
         // if location is same as start point return 0
-        if ($lngTo == $lngFrom && $latTo == $latFrom) {
+        if ($lngTo == $this->lng && $latTo == $this->lat) {
             return 0;
         } else {
             // do the calculation
-            $theta = $lngTo - $lngFrom;
+            $theta = $lngTo - $this->lng;
 
-            $dist = sin(deg2rad($latTo)) * sin(deg2rad($latFrom))
-                + cos(deg2rad($latTo)) * cos(deg2rad($latFrom))
+            $dist = sin(deg2rad($latTo)) * sin(deg2rad($this->lat))
+                + cos(deg2rad($latTo)) * cos(deg2rad($this->lat))
                 * cos(deg2rad($theta));
 
             $dist  = acos($dist);

@@ -1,9 +1,13 @@
 <?php
 namespace AdminUI\AdminUIAddress;
 
-use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\ServiceProvider;
+use AdminUI\AdminUIAddress\Classes\Address;
+use AdminUI\AdminUIAddress\Classes\Distance;
+use AdminUI\AdminUIAddress\Facades\AddressFacade;
+use AdminUI\AdminUIAddress\Facades\DistanceFacade;
 
 class AdminUIAddressServiceProvider extends ServiceProvider
 {
@@ -18,7 +22,7 @@ class AdminUIAddressServiceProvider extends ServiceProvider
         Schema::defaultStringLength(255);
 
         // load view aliases
-        Blade::include('components.addressBlock', 'addressBlock');
+        Blade::include('components.address-block', 'addressBlock');
     }
 
     /**
@@ -28,9 +32,25 @@ class AdminUIAddressServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        // add the facade
+        $this->app->bind('GetAddress', function($app) {
+            return new Address();
+        });
+        $this->app->bind('GetDistance', function($app) {
+            return new Distance();
+        });
+
+        // add the aliases
+        $this->app->alias('AddressFacade', AddressFacade::class);
+        $this->app->alias('DistanceFacade', DistanceFacade::class);
+
+        // do the publish bits
         $this->publish();
+        // do the migrations
         $this->migrate();
+        // declare some routes
         $this->routes();
+        // add some views
         $this->views();
     }
 

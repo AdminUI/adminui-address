@@ -1,7 +1,7 @@
 <?php
 namespace AdminUI\AdminUIAddress\Models;
 
-Use App\Model;
+use Illuminate\Database\Eloquent\Model;
 
 class Country extends Model
 {
