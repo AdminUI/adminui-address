@@ -68,12 +68,17 @@ Simply call the class with the variables and measurement unit, and the resulting
 
     use Distance;
     ...
-    $distance  =  round(Distance::between(['lng'  => request('lng'),  'lat'  => request('lat')], 'KM'), 2);
+    $distance  =  round(Distance::between(['lng'  => request('lng'),  'lat'  => request('lat')]), 2);
 
 This will take 3 parameters:<br>
 **TO** - array [lng, lat]<br>
-**UNIT** - measurement optional, KM - Kilometers, NM - Nautical Miles, M - Miles*<br>
 **FROM** - array[lng, lat] optional, by default this is lng and lat setup in env or config file<br>
+<br>
+Distance can be returned in 3 units of measurement.
+M - Miles ** Default **
+KM - Kilometers
+NM - Nautical Miles
+This can be set within the .env or directly in config file.
 
 Distance is returned.
 
@@ -81,7 +86,7 @@ Credit given to : <br>
 [altrozero/](https://packagist.org/packages/altrozero/)get-address-io-php<br>
 for some of the coding structure.
 
-**Still to come:**<br>
+**Still to come in next branch:**<br>
 Add some Admin Functionality for Whitelist, Blacklist, Invoices
 
 *Enjoy.*
