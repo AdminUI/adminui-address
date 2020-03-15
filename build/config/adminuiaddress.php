@@ -13,5 +13,8 @@ return [
     'lng' => env('AUI_ADDRESS_LNG', '0.1278'),
 
     // Default Latitude to calculate against distance
-    'lat' => env('AUI_ADDRESS_LAT', '51.5074')
+    'lat' => env('AUI_ADDRESS_LAT', '51.5074'),
+
+    // Unit of measure for distance
+    'unit' => env('AUI_UNIT', 'M'),
 ];

@@ -6,8 +6,6 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use AdminUI\AdminUIAddress\Classes\Address;
 use AdminUI\AdminUIAddress\Classes\Distance;
-use AdminUI\AdminUIAddress\Facades\AddressFacade;
-use AdminUI\AdminUIAddress\Facades\DistanceFacade;
 
 class AdminUIAddressServiceProvider extends ServiceProvider
 {
@@ -33,16 +31,12 @@ class AdminUIAddressServiceProvider extends ServiceProvider
     public function register()
     {
         // add the facade
-        $this->app->bind('GetAddress', function($app) {
+        $this->app->bind('address', function($app) {
             return new Address();
         });
-        $this->app->bind('GetDistance', function($app) {
+        $this->app->bind('distance', function($app) {
             return new Distance();
         });
-
-        // add the aliases
-        $this->app->alias('AddressFacade', AddressFacade::class);
-        $this->app->alias('DistanceFacade', DistanceFacade::class);
 
         // do the publish bits
         $this->publish();
@@ -58,7 +52,8 @@ class AdminUIAddressServiceProvider extends ServiceProvider
     {
         $this->publishes([
                 __DIR__.'/../build/config/adminuiaddress.php' => config_path('adminuiaddress.php'),
-                __DIR__.'/../build/components' => resource_path('views/components')
+                __DIR__.'/Views/components' => resource_path('views/components'),
+                __DIR__.'/../build/js' => public_path('vendor/adminui/js')
             ],
             'adminui-address'
         );

@@ -3,10 +3,10 @@ namespace AdminUI\AdminUIAddress\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class DistanceFacade extends Facade
+class AddressFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'Distance';
+        return 'address';
     }
 }

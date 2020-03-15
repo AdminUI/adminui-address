@@ -1,17 +1,20 @@
 @php
-$countries = AdminUI\AdminUIAddress\Models\Country::all();
+$countries = cache()->remember('auicountries', now()->addDays(1) , function() {
+    return AdminUI\AdminUIAddress\Models\Country::active()->orderBy('name')->get();
+});
+$states = cache()->remember('auistates', now()->addDays(1), function() {
+    return AdminUI\AdminUIAddress\Models\State::orderBy('name')->get();
+});
 @endphp
 <div class="address-block">
     <div class="form-group">
         <label for="Country" class="control-label">Country</label><br/>
         <select class="custom-select form-control country-lookup" name="country_id">
             @foreach ($countries as $country)
-                @php
-                if ($country->id == old('country', 222)) {
-                    $selected = 'selected="selected"';
-                }
-                @endphp
-                <option value="{{ $country->id }}" data-postcode="{{ $country->postcode }}" {{ $selected }}>
+                <option value="{{ $country->id }}"
+                    data-postcode="{{ $country->postcode }}"
+                    {{ $country->id == old('country', 222) ? 'selected="selected"' : '' }}
+                >
                     {{ $country->name }}
                 </option>
             @endforeach
@@ -63,78 +66,33 @@ $countries = AdminUI\AdminUIAddress\Models\Country::all();
             <label for="Town" class="control-label">Town</label>
             <input class="form-control town_field" name="town" type="text" value="{{ old('town', '') }}">
         </div>
-        <div class="form-group">
+        <div class="form-group counties">
             <label for="County" class="control-label">County</label>
             <input class="form-control county_field" name="county" type="text" value="{{ old('county', '') }}">
         </div>
+        <div class="form-group states">
+            <label for="County" class="control-label">US State</label>
+            <select class="custom-select form-control" name="state">
+                @foreach ($states as $state)
+                    <option value="{{ $state->id }}">
+                        {{ $state->name }}
+                    </option>
+                @endforeach
+            </select>
+        </div>
         <div class="form-group">
             <label for="Postcode" class="control-label">Postcode</label>
-            <input class="form-control address-postcode upperCase" name="postcode" type="text" value="{{ old('postcode', '') }}">
+            <input class="form-control address-postcode upperCase" name="postcode" type="text" value="{{ old('postcode', '') }}" required="required">
         </div>
 
+        <div class="address-notification alert alert-warning p-1">
+        </div>
         <input type="hidden" name="lng" class="lng_field" value="{{ old('lng', '') }}">
         <input type="hidden" name="lat" class="lat_field" value="{{ old('lat', '') }}">
+        <input type="hidden" name="distance" class="distance_field" value="{{ old('distance', '') }}">
     </div>
 </div>
 
 @push('scripts')
-<script>
-    $('.address-select, .main-address-block').hide();
-    var $data;
-
-    $(document).on('change', '.country-lookup', function() {
-        if ($(this).val() != '222') {
-            hideLookup($(this));
-        } else {
-            showLookup($(this));
-        }
-    });
-
-    $(document).on('click', '.postcode-manual', function() {
-        hideLookup($(this));
-    });
-
-    $(document).on('keyup', '.postcode', function(){
-        $(this).closest('.address-block').find('.address-postcode').val($(this).val());
-    });
-
-    $(document).on('click', '.postcode-lookup', function() {
-        $select = $(this).closest('.address-block').find('.address-select');
-        $postcode = $(this).closest('.row').find('.postcode');
-        if ($postcode.val().length < 4) {
-            return false;
-        }
-        $.getJSON("{{ route('api.address.lookup') }}", { postcode: $postcode.val() }, function(data) {
-            $data = data;
-            var results = '<option value="">Please Choose</options>';
-            $.each(data.original.addresses, function(key, val) {
-                results += '<option value="' + key + '">' + val.formatted_string + '</option>';
-            });
-            $('.address-select-pick').html(results);
-            $('.address-select').slideDown('fast');
-        });
-    });
-
-    $(document).on('change', '.address-select-pick', function() {
-        key = $(this).val();
-        chosen = $data.original.addresses[key];
-        $block = $(this).closest('.address-block');
-        hideLookup($(this));
-        $block.find('.address_field').val(chosen.line_1);
-        $block.find('.address_2_field').val(chosen.line_2);
-        $block.find('.town_field').val(chosen.town_or_city);
-        $block.find('.county_field').val(chosen.county);
-        $block.find('.lng_field').val($data.original.longitude);
-        $block.find('.lat_field').val($data.original.latitude);
-    });
-
-    function hideLookup($block) {
-        $block.closest('.address-block').find('.address-select, .lookup-block').hide();
-        $block.closest('.address-block').find('.main-address-block').slideDown('fast');
-    }
-    function showLookup($block) {
-        $block.closest('.address-block').find('.lookup-block').show();
-        $block.closest('.address-block').find('.main-address-block').slideUp('fast');
-    }
-</script>
+<script src="vendor/adminui/js/address-block.js"></script>
 @endpush

@@ -1,7 +1,8 @@
 <?php
-namespace AdminUI\AdminUI\Database\Seeds;
+namespace AdminUI\AdminUIAddress\Database\Seeds;
 
 use Illuminate\Database\Seeder;
+use Carbon\Carbon;
 
 class CountriesTableSeeder extends Seeder
 {
@@ -26,9 +27,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '93',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             1 =>
             array (
@@ -40,9 +41,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '355',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             2 =>
             array (
@@ -54,9 +55,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '213',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             3 =>
             array (
@@ -68,9 +69,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '1-683',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             4 =>
             array (
@@ -82,9 +83,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '376',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             5 =>
             array (
@@ -96,9 +97,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '244',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             6 =>
             array (
@@ -110,9 +111,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '1-263',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             7 =>
             array (
@@ -124,9 +125,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '0',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             8 =>
             array (
@@ -138,9 +139,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '1-267',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             9 =>
             array (
@@ -152,9 +153,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '54',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             10 =>
             array (
@@ -166,9 +167,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '374',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             11 =>
             array (
@@ -180,9 +181,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '297',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             12 =>
             array (
@@ -194,9 +195,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '61',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             13 =>
             array (
@@ -208,9 +209,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '43',
                 'postcode' => 1,
                 'vat_exempt' => 0,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             14 =>
             array (
@@ -222,9 +223,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '994',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             15 =>
             array (
@@ -236,9 +237,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '1-241',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             16 =>
             array (
@@ -250,9 +251,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '973',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             17 =>
             array (
@@ -264,9 +265,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '880',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             18 =>
             array (
@@ -278,9 +279,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '1-245',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             19 =>
             array (
@@ -292,9 +293,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '375',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             20 =>
             array (
@@ -306,9 +307,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '32',
                 'postcode' => 1,
                 'vat_exempt' => 0,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             21 =>
             array (
@@ -320,9 +321,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '501',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             22 =>
             array (
@@ -334,9 +335,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '229',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             23 =>
             array (
@@ -348,9 +349,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '1-440',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             24 =>
             array (
@@ -362,9 +363,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '975',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             25 =>
             array (
@@ -376,9 +377,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '591',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             26 =>
             array (
@@ -390,9 +391,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '387',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             27 =>
             array (
@@ -404,9 +405,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '267',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             28 =>
             array (
@@ -418,9 +419,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '0',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             29 =>
             array (
@@ -432,9 +433,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '55',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             30 =>
             array (
@@ -446,9 +447,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '246',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             31 =>
             array (
@@ -460,9 +461,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '673',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             32 =>
             array (
@@ -474,9 +475,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '359',
                 'postcode' => 1,
                 'vat_exempt' => 0,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             33 =>
             array (
@@ -488,9 +489,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '226',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             34 =>
             array (
@@ -502,9 +503,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '257',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             35 =>
             array (
@@ -516,9 +517,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '855',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             36 =>
             array (
@@ -530,9 +531,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '237',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             37 =>
             array (
@@ -544,9 +545,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '1',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             38 =>
             array (
@@ -558,9 +559,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '238',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             39 =>
             array (
@@ -572,9 +573,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '1-344',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             40 =>
             array (
@@ -586,9 +587,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '236',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             41 =>
             array (
@@ -600,9 +601,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '235',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             42 =>
             array (
@@ -614,9 +615,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '56',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             43 =>
             array (
@@ -628,9 +629,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '86',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             44 =>
             array (
@@ -642,9 +643,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '61',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             45 =>
             array (
@@ -656,9 +657,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '61',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             46 =>
             array (
@@ -670,9 +671,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '57',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             47 =>
             array (
@@ -684,9 +685,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '269',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             48 =>
             array (
@@ -698,9 +699,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '242',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             49 =>
             array (
@@ -712,9 +713,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '682',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             50 =>
             array (
@@ -726,9 +727,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '506',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             51 =>
             array (
@@ -740,9 +741,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '225',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             52 =>
             array (
@@ -754,9 +755,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '385',
                 'postcode' => 1,
                 'vat_exempt' => 0,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             53 =>
             array (
@@ -768,9 +769,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '53',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             54 =>
             array (
@@ -782,9 +783,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '357',
                 'postcode' => 1,
                 'vat_exempt' => 0,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             55 =>
             array (
@@ -796,9 +797,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '420',
                 'postcode' => 1,
                 'vat_exempt' => 0,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             56 =>
             array (
@@ -810,9 +811,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '45',
                 'postcode' => 1,
                 'vat_exempt' => 0,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             57 =>
             array (
@@ -824,9 +825,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '253',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             58 =>
             array (
@@ -838,9 +839,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '1-766',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             59 =>
             array (
@@ -852,9 +853,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '670',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             60 =>
             array (
@@ -866,9 +867,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '593',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             61 =>
             array (
@@ -880,9 +881,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '20',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             62 =>
             array (
@@ -894,9 +895,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '503',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             63 =>
             array (
@@ -908,9 +909,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '240',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             64 =>
             array (
@@ -922,9 +923,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '291',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             65 =>
             array (
@@ -936,9 +937,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '372',
                 'postcode' => 1,
                 'vat_exempt' => 0,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             66 =>
             array (
@@ -950,9 +951,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '251',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             67 =>
             array (
@@ -964,9 +965,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '500',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             68 =>
             array (
@@ -978,9 +979,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '298',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             69 =>
             array (
@@ -992,9 +993,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '679',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             70 =>
             array (
@@ -1006,9 +1007,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '358',
                 'postcode' => 1,
                 'vat_exempt' => 0,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             71 =>
             array (
@@ -1020,9 +1021,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '33',
                 'postcode' => 1,
                 'vat_exempt' => 0,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             72 =>
             array (
@@ -1034,9 +1035,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '594',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             73 =>
             array (
@@ -1048,9 +1049,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '689',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             74 =>
             array (
@@ -1062,9 +1063,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '0',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             75 =>
             array (
@@ -1076,9 +1077,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '241',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             76 =>
             array (
@@ -1090,9 +1091,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '220',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             77 =>
             array (
@@ -1104,9 +1105,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '995',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             78 =>
             array (
@@ -1118,9 +1119,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '49',
                 'postcode' => 1,
                 'vat_exempt' => 0,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             79 =>
             array (
@@ -1132,9 +1133,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '233',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             80 =>
             array (
@@ -1146,9 +1147,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '350',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             81 =>
             array (
@@ -1160,9 +1161,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '30',
                 'postcode' => 1,
                 'vat_exempt' => 0,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             82 =>
             array (
@@ -1174,9 +1175,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '299',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             83 =>
             array (
@@ -1188,9 +1189,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '1-472',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             84 =>
             array (
@@ -1202,9 +1203,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '590',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             85 =>
             array (
@@ -1216,9 +1217,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '1-670',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             86 =>
             array (
@@ -1230,9 +1231,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '502',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             87 =>
             array (
@@ -1244,9 +1245,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '224',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             88 =>
             array (
@@ -1258,9 +1259,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '245',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             89 =>
             array (
@@ -1272,9 +1273,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '592',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             90 =>
             array (
@@ -1286,9 +1287,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '509',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             91 =>
             array (
@@ -1300,9 +1301,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '0',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             92 =>
             array (
@@ -1314,9 +1315,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '504',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             93 =>
             array (
@@ -1328,9 +1329,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '852',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             94 =>
             array (
@@ -1342,9 +1343,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '36',
                 'postcode' => 1,
                 'vat_exempt' => 0,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             95 =>
             array (
@@ -1356,9 +1357,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '354',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             96 =>
             array (
@@ -1370,9 +1371,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '91',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             97 =>
             array (
@@ -1384,9 +1385,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '62',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             98 =>
             array (
@@ -1398,9 +1399,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '98',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             99 =>
             array (
@@ -1412,9 +1413,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '964',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             100 =>
             array (
@@ -1426,9 +1427,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '353',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             101 =>
             array (
@@ -1440,9 +1441,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '972',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             102 =>
             array (
@@ -1454,9 +1455,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '39',
                 'postcode' => 1,
                 'vat_exempt' => 0,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             103 =>
             array (
@@ -1468,9 +1469,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '1-875',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             104 =>
             array (
@@ -1482,9 +1483,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '81',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             105 =>
             array (
@@ -1496,9 +1497,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '962',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             106 =>
             array (
@@ -1510,9 +1511,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '7',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             107 =>
             array (
@@ -1524,9 +1525,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '254',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             108 =>
             array (
@@ -1538,9 +1539,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '686',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             109 =>
             array (
@@ -1552,9 +1553,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '850',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             110 =>
             array (
@@ -1566,9 +1567,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '82',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             111 =>
             array (
@@ -1580,9 +1581,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '965',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             112 =>
             array (
@@ -1594,9 +1595,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '996',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             113 =>
             array (
@@ -1608,9 +1609,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '856',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             114 =>
             array (
@@ -1622,9 +1623,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '371',
                 'postcode' => 1,
                 'vat_exempt' => 0,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             115 =>
             array (
@@ -1636,9 +1637,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '961',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             116 =>
             array (
@@ -1650,9 +1651,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '266',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             117 =>
             array (
@@ -1664,9 +1665,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '231',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             118 =>
             array (
@@ -1678,9 +1679,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '218',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             119 =>
             array (
@@ -1692,9 +1693,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '423',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             120 =>
             array (
@@ -1706,9 +1707,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '370',
                 'postcode' => 1,
                 'vat_exempt' => 0,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             121 =>
             array (
@@ -1720,9 +1721,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '352',
                 'postcode' => 1,
                 'vat_exempt' => 0,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             122 =>
             array (
@@ -1734,9 +1735,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '853',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             123 =>
             array (
@@ -1748,9 +1749,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '389',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             124 =>
             array (
@@ -1762,9 +1763,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '261',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             125 =>
             array (
@@ -1776,9 +1777,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '265',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             126 =>
             array (
@@ -1790,9 +1791,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '60',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             127 =>
             array (
@@ -1804,9 +1805,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '960',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             128 =>
             array (
@@ -1818,9 +1819,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '223',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             129 =>
             array (
@@ -1832,9 +1833,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '356',
                 'postcode' => 1,
                 'vat_exempt' => 0,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             130 =>
             array (
@@ -1846,9 +1847,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '692',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             131 =>
             array (
@@ -1860,9 +1861,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '596',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             132 =>
             array (
@@ -1874,9 +1875,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '222',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             133 =>
             array (
@@ -1888,9 +1889,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '230',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             134 =>
             array (
@@ -1902,9 +1903,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '262',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             135 =>
             array (
@@ -1916,9 +1917,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '52',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             136 =>
             array (
@@ -1930,9 +1931,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '691',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             137 =>
             array (
@@ -1944,9 +1945,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '373',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             138 =>
             array (
@@ -1958,9 +1959,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '377',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             139 =>
             array (
@@ -1972,9 +1973,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '976',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             140 =>
             array (
@@ -1986,9 +1987,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '1-663',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             141 =>
             array (
@@ -2000,9 +2001,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '212',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             142 =>
             array (
@@ -2014,9 +2015,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '258',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             143 =>
             array (
@@ -2028,9 +2029,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '95',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             144 =>
             array (
@@ -2042,9 +2043,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '264',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             145 =>
             array (
@@ -2056,9 +2057,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '674',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             146 =>
             array (
@@ -2070,9 +2071,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '977',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             147 =>
             array (
@@ -2084,9 +2085,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '31',
                 'postcode' => 1,
                 'vat_exempt' => 0,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             148 =>
             array (
@@ -2098,9 +2099,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '599',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             149 =>
             array (
@@ -2112,9 +2113,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '687',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             150 =>
             array (
@@ -2126,9 +2127,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '64',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             151 =>
             array (
@@ -2140,9 +2141,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '505',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             152 =>
             array (
@@ -2154,9 +2155,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '227',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             153 =>
             array (
@@ -2168,9 +2169,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '234',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             154 =>
             array (
@@ -2182,9 +2183,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '683',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             155 =>
             array (
@@ -2196,9 +2197,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '672',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             156 =>
             array (
@@ -2210,9 +2211,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '1-669',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             157 =>
             array (
@@ -2224,9 +2225,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '47',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             158 =>
             array (
@@ -2238,9 +2239,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '968',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             159 =>
             array (
@@ -2252,9 +2253,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '92',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             160 =>
             array (
@@ -2266,9 +2267,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '680',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             161 =>
             array (
@@ -2280,9 +2281,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '507',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             162 =>
             array (
@@ -2294,9 +2295,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '675',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             163 =>
             array (
@@ -2308,9 +2309,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '595',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             164 =>
             array (
@@ -2322,9 +2323,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '51',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             165 =>
             array (
@@ -2336,9 +2337,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '63',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             166 =>
             array (
@@ -2350,9 +2351,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '0',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             167 =>
             array (
@@ -2364,9 +2365,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '48',
                 'postcode' => 1,
                 'vat_exempt' => 0,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             168 =>
             array (
@@ -2378,9 +2379,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '351',
                 'postcode' => 1,
                 'vat_exempt' => 0,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             169 =>
             array (
@@ -2392,9 +2393,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '974',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             170 =>
             array (
@@ -2406,9 +2407,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '262',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             171 =>
             array (
@@ -2420,9 +2421,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '7',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             172 =>
             array (
@@ -2434,9 +2435,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '250',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             173 =>
             array (
@@ -2448,9 +2449,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '1-868',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             174 =>
             array (
@@ -2462,9 +2463,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '1-757',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             175 =>
             array (
@@ -2476,9 +2477,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '1-783',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             176 =>
             array (
@@ -2490,9 +2491,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '685',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             177 =>
             array (
@@ -2504,9 +2505,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '378',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             178 =>
             array (
@@ -2518,9 +2519,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '239',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             179 =>
             array (
@@ -2532,9 +2533,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '966',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             180 =>
             array (
@@ -2546,9 +2547,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '221',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             181 =>
             array (
@@ -2560,9 +2561,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '248',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             182 =>
             array (
@@ -2574,9 +2575,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '232',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             183 =>
             array (
@@ -2588,9 +2589,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '65',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             184 =>
             array (
@@ -2602,9 +2603,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '421',
                 'postcode' => 1,
                 'vat_exempt' => 0,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             185 =>
             array (
@@ -2616,9 +2617,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '386',
                 'postcode' => 1,
                 'vat_exempt' => 0,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             186 =>
             array (
@@ -2630,9 +2631,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '677',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             187 =>
             array (
@@ -2644,9 +2645,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '252',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             188 =>
             array (
@@ -2658,9 +2659,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '27',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             189 =>
             array (
@@ -2672,9 +2673,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '0',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             190 =>
             array (
@@ -2686,9 +2687,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '34',
                 'postcode' => 1,
                 'vat_exempt' => 0,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             191 =>
             array (
@@ -2700,9 +2701,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '94',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             192 =>
             array (
@@ -2714,9 +2715,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '290',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             193 =>
             array (
@@ -2728,9 +2729,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '508',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             194 =>
             array (
@@ -2742,9 +2743,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '249',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             195 =>
             array (
@@ -2756,9 +2757,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '597',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             196 =>
             array (
@@ -2770,9 +2771,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '47',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             197 =>
             array (
@@ -2784,9 +2785,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '268',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             198 =>
             array (
@@ -2798,9 +2799,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '46',
                 'postcode' => 1,
                 'vat_exempt' => 0,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             199 =>
             array (
@@ -2812,9 +2813,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '41',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             200 =>
             array (
@@ -2826,9 +2827,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '963',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             201 =>
             array (
@@ -2840,9 +2841,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '886',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             202 =>
             array (
@@ -2854,9 +2855,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '992',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             203 =>
             array (
@@ -2868,9 +2869,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '255',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             204 =>
             array (
@@ -2882,9 +2883,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '66',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             205 =>
             array (
@@ -2896,9 +2897,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '228',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             206 =>
             array (
@@ -2910,9 +2911,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '690',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             207 =>
             array (
@@ -2924,9 +2925,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '676',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             208 =>
             array (
@@ -2938,9 +2939,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '1-867',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             209 =>
             array (
@@ -2952,9 +2953,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '216',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             210 =>
             array (
@@ -2966,9 +2967,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '90',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             211 =>
             array (
@@ -2980,9 +2981,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '993',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             212 =>
             array (
@@ -2994,9 +2995,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '1-648',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             213 =>
             array (
@@ -3008,9 +3009,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '688',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             214 =>
             array (
@@ -3022,9 +3023,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '256',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             215 =>
             array (
@@ -3036,9 +3037,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '380',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             216 =>
             array (
@@ -3050,9 +3051,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '971',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             217 =>
             array (
@@ -3064,9 +3065,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '44',
                 'postcode' => 1,
                 'vat_exempt' => 0,
-                'spare' => '1',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             218 =>
             array (
@@ -3078,9 +3079,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '1',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '1',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             219 =>
             array (
@@ -3092,9 +3093,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '598',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             220 =>
             array (
@@ -3106,9 +3107,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '998',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             221 =>
             array (
@@ -3120,9 +3121,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '678',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             222 =>
             array (
@@ -3134,9 +3135,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '379',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             223 =>
             array (
@@ -3148,9 +3149,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '58',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             224 =>
             array (
@@ -3162,9 +3163,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '84',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             225 =>
             array (
@@ -3176,9 +3177,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '1-283',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             226 =>
             array (
@@ -3190,9 +3191,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '1-339',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             227 =>
             array (
@@ -3204,9 +3205,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '681',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             228 =>
             array (
@@ -3218,9 +3219,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '212',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             229 =>
             array (
@@ -3232,9 +3233,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '967',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             230 =>
             array (
@@ -3246,9 +3247,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '243',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             231 =>
             array (
@@ -3260,9 +3261,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '260',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             232 =>
             array (
@@ -3274,9 +3275,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '263',
                 'postcode' => 0,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             233 =>
             array (
@@ -3288,9 +3289,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '44',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             234 =>
             array (
@@ -3302,9 +3303,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '44',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             235 =>
             array (
@@ -3316,9 +3317,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '382',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             236 =>
             array (
@@ -3330,9 +3331,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '381',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             237 =>
             array (
@@ -3344,9 +3345,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '340',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             238 =>
             array (
@@ -3358,9 +3359,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '970',
                 'postcode' => 1,
                 'vat_exempt' => 1,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
             239 =>
             array (
@@ -3372,9 +3373,9 @@ class CountriesTableSeeder extends Seeder
                 'dialing_code' => '40',
                 'postcode' => 0,
                 'vat_exempt' => 0,
-                'spare' => '0',
-                'created_at' => NULL,
-                'updated_at' => NULL,
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
             ),
         ));
 

@@ -9,4 +9,9 @@ class Country extends Model
     {
         return ['' => 'Choose country'] + $this->pluck('name', 'id')->toArray();
     }
+
+    public function scopeActive($query)
+    {
+        return $query->whereStatus(1);
+    }
 }

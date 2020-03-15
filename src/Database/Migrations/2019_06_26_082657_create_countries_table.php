@@ -23,6 +23,7 @@ class CreateCountriesTable extends Migration {
 			$table->string('dialing_code', 8)->nullable();
 			$table->boolean('postcode')->default(0);
 			$table->boolean('vat_exempt')->default(0);
+			$table->boolean('status')->default(1);
 			$table->timestamps();
 		});
 	}

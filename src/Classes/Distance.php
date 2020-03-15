@@ -10,9 +10,12 @@ class Distance
 
     private $lng;
 
-    public function __construct($lat, $lng) {
-        $this->lat = $lat ?? config('adminuiaddress.lat');
-        $this->lng = $lng ?? config('adminuiaddress.lng');
+    private $unit;
+
+    public function __construct() {
+        $this->lat = config('adminuiaddress.lat');
+        $this->lng = config('adminuiaddress.lng');
+        $this->unit = config('adminuiaddress.unit', 'M');
     }
 
     /**
@@ -23,7 +26,7 @@ class Distance
      * @param string $unit - Measurement Unit - km - Kilometers, nm - Nautical Miles, m - miles
      * @return float $distance - measurement result
      */
-    public function between($to, $unit = 'm')
+    public function between($to)
     {
         // pull the variables for ease
         $lngTo   = $to['lng'];
@@ -43,12 +46,11 @@ class Distance
             $dist  = acos($dist);
             $dist  = rad2deg($dist);
             $miles = $dist * 60 * 1.1515;
-            $unit  = strtoupper($unit);
 
             // return the distance in unit requested
-            if ($unit == "KM") {
+            if ($this->unit == "KM") {
                 return ($miles * 1.609344);
-            } else if ($unit == "NM") {
+            } elseif ($this->unit == "NM") {
                 return ($miles * 0.8684);
             } else {
                 return $miles;
