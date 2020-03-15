@@ -18,23 +18,29 @@ Once installed Laravel with auto-find the package.
 
 This package uses Laravel HTTP class to get results from getaddress.io
 
-The package does come with a Countries migration and seed.<br>
+The package does come with a Countries migration and seed and also a US State Migration and seed.<br>
+The Country table contains a few extra fields, iso codes, postcode requirement, dial code and status.<br>
+If the status is 0 it will not be selectable, hence restricting certain countries if need be.<br>
+If postcode is 1 the postcode field will be required.
+
 Please run :
 
     php artisan vendor:publish --tag adminui-address
     php artisan migrate
-    php db:seed --class=AdminUI\AdminUIAddress\Database\Seeds\DatabaseSeeder
+    php db:seed --class=AdminUI\\AdminUIAddress\\Database\\Seeds\\DatabaseSeeder
 
-Once done you will need to update the config file 'adminui-address' or add the following variables to the
+Once done you will need to update the config file 'adminuiaddress' or add the following variables to the
 .env file:
 
     AUI_ADDRESS_APIKEY=""
-    AUI_ADDRESS_ADMINKEY="" 
+    AUI_ADDRESS_ADMINKEY=""
     AUI_ADDRESS_CACHETIME=""
     AUI_ADDRESS_LNG=""
     AUI_ADDRESS_LAT=""
+    AUI_UNIT="M"
 
 The address component has been moved to your views/components folder.<br>
+And its JS for the blade component to public/vendor/adminui/address-block.js<br/>
 It can be easily called using
 
     @addressBlock()
@@ -45,6 +51,13 @@ Once address is chosen a full address block appears.
 
 The system uses Laravels caching to store postcode results, to save repeat lookups.
 
+Please ensure to add in Jquery to your template.
+Also please add
+
+    @stack('scripts')
+
+This will allow the required Javascript to be pushed below the Jquery call.
+
 ## Distance Helper Class
 
 The package comes with a distance helper class.
@@ -53,11 +66,11 @@ the postcode lookup script.
 
 Simply call the class with the variables and measurement unit, and the resulting distance will be returned
 
-    use AdminUI\AdminUIAddress\Helpers\Distance;
+    use Distance;
     ...
     $distance  =  round(Distance::between(['lng'  => request('lng'),  'lat'  => request('lat')], 'KM'), 2);
 
-This will take 3 parameters:<br> 
+This will take 3 parameters:<br>
 **TO** - array [lng, lat]<br>
 **UNIT** - measurement optional, KM - Kilometers, NM - Nautical Miles, M - Miles*<br>
 **FROM** - array[lng, lat] optional, by default this is lng and lat setup in env or config file<br>
