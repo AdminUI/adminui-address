@@ -94,5 +94,5 @@ $states = cache()->remember('auistates', now()->addDays(1), function() {
 </div>
 
 @push('scripts')
-<script src="{{ public_path('vendor/adminui/js/address-block.js') }}"></script>
+<script src="{{ asset('vendor/adminui/js/address-block.js') }}"></script>
 @endpush
