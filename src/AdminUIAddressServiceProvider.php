@@ -53,6 +53,7 @@ class AdminUIAddressServiceProvider extends ServiceProvider
         $this->publishes([
                 __DIR__.'/../build/config/adminuiaddress.php' => config_path('adminuiaddress.php'),
                 __DIR__.'/Views/components' => resource_path('views/components'),
+                __DIR__.'/lang' => resource_path('lang'),
                 __DIR__.'/../build/js' => public_path('vendor/adminui/js')
             ],
             'adminui-address'
