@@ -3,15 +3,24 @@ namespace AdminUI\AdminUIAddress\Classes;
 
 // Laravel 7 Http helper
 use Illuminate\Support\Facades\Http;
-use AdminUI\AdminUIAddress\Classes\AddressCore;
 /**
  * Helper Class to help with getAddress.io
  * This is a rewritten version of
  * https://github.com/Altrozero/get-address-io-php
- * with a Laravel 7 wrapper
+ * for Laravel 7
  */
-class Address extends AddressCore
+class Address
 {
+    // default address
+    const URL = 'https://api.getAddress.io';
+
+    private $apiKey;
+
+    // setup api key
+    public function __construct() {
+        $this->apiKey   = config('adminuiaddress.apiKey', '');
+    }
+
     /**
      * Find Api Request
      *
@@ -41,5 +50,36 @@ class Address extends AddressCore
         $response = Http::get($url)->json();
         // return the results
         return $response;
+    }
+
+    /**
+     * Build the Url
+     *
+     * @param array $data
+     * @param array $params
+     * @return string
+     */
+    public function buildUrl($data, $params = array())
+    {
+        $url = self::URL;
+        foreach ($data as $value) {
+            if ($value) {
+                $url .= '/'.$value;
+            }
+        }
+        $url .= '?api-key='.$this->apiKey;
+
+        foreach ($params as $key => $param) {
+            $url .= '&';
+            $url .= urlencode($key) . '=';
+            if ($param === true) {
+                $url .= 'true';
+            } else if ($param === false) {
+                $url .= 'false';
+            } else {
+                $url .= urlencode($param);
+            }
+        }
+        return $url;
     }
 }
