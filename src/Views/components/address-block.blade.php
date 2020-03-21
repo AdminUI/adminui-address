@@ -94,6 +94,6 @@ $states = cache()->remember('auistates', now()->addDays(1), function() {
 </div>
 
 @push('scripts')
-{-- Remember to add @stack('scripts') to template footer --}
+{{--Remember to add @stack('scripts') to template footer --}}
 <script src="{{ asset('vendor/adminui/js/address-block.js') }}"></script>
 @endpush
