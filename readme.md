@@ -27,7 +27,7 @@ Please run :
 
     php artisan vendor:publish --tag adminui-address
     php artisan migrate
-    php db:seed --class=AdminUI\\AdminUIAddress\\Database\\Seeds\\DatabaseSeeder
+    php artisan db:seed --class=AdminUI\AdminUIAddress\Database\Seeds\DatabaseSeeder
 
 Once done you will need to update the config file 'adminuiaddress' or add the following variables to the
 .env file:
