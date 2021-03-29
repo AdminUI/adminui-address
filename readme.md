@@ -1,5 +1,6 @@
 # AdminUI UK Address Lookup for Laravel ^7.0
 
+Version 1 - Jquery
 
 This package is built for use within the AdminUI Framework, However due to the needs across multiple systems
 it can be run on any Laravel 7+ project.
