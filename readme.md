@@ -1,13 +1,14 @@
-# AdminUI UK Address Lookup for Laravel ^7.0
+# AdminUI UK Address Lookup for Laravel ^8.0
 
+Version 2.x - Vue JS
 
 This package is built for use within the AdminUI Framework, However due to the needs across multiple systems
 it can be run on any Laravel 7+ project.
 
 ## Requirements
 
-**Laravel 7 package**<br>
-**Jquery**<br>
+**Laravel 8 package**<br>
+**VueJS**<br>
 **[GetAddress.io](https://getaddress.io) api key**<br>
 
 ## Installation
