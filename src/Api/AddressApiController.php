@@ -1,51 +1,31 @@
 <?php
+
 namespace AdminUI\AdminUIAddress\Api;
 
-use Address;
-use Distance;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use AdminUI\AdminUIAddress\Resources\AddressApiResource;
-use AdminUI\AdminUIAddress\Models\State;
+use AdminUI\AdminUIAddress\Helpers\AddressioApi;
 
 /**
  * A api request to return via php from GetAddress.io
  */
 class AddressApiController extends Controller
 {
-    /**
-     * Lookup results on postocde
-     *
-     * @return result an expanded result from getaddress.io
-     */
-    public function lookup()
+    public function __construct()
     {
-        // strip any spaces from postcode
-        $postcode = str_replace(' ', '', request('postcode'));
+        $this->addressApi = new AddressioApi();
+    }
 
-        // do api request and cache the results
-        cache()->clear();
-        $response = cache()->remember(
-            'address'.$postcode,
-            config('adminuiaddress.cacheTime'),
-            function() use ($postcode) {
-                return json_decode(json_encode(Address::find($postcode, false, true)));
-            }
-        );
+    public function lookupPostcode(Request $request)
+    {
+        $request->validate([
+            'postcode' => ['required'],
+        ]);
 
-        // return the response
-        $addresses = collect($response->addresses ?? (object)[]);
-        return AddressApiResource::collection($addresses)
-            ->additional([
-                'meta' => [
-                    'postcode'  => $postcode,
-                    'longitude' => $response->longitude ?? 0,
-                    'latitude'  => $response->latitude ?? 0,
-                    'results'   => $addresses->count(),
-                    'distance'  => round(Distance::between([
-                                        'lat' => $response->latitude ?? 0,
-                                        'lng' => $response->logitude ?? 0
-                                    ]), 2)
-                ]
-            ]);
+        $response = $this->addressApi->find(Request('postcode'));
+
+        return json_encode([
+            'data' => $response,
+        ]);
     }
 }

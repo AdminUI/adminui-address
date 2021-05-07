@@ -1,4 +1,5 @@
 <?php
+
 namespace AdminUI\AdminUIAddress\Classes;
 
 /**
@@ -12,7 +13,8 @@ class Distance
 
     private $unit;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->lat = config('adminuiaddress.lat');
         $this->lng = config('adminuiaddress.lng');
         $this->unit = config('adminuiaddress.unit', 'M');

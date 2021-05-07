@@ -1,4 +1,5 @@
 <?php
+
 namespace AdminUI\AdminUIAddress;
 
 use Illuminate\Support\Facades\Blade;
@@ -6,74 +7,69 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use AdminUI\AdminUIAddress\Classes\Address;
 use AdminUI\AdminUIAddress\Classes\Distance;
+use AdminUI\AdminUIFramework\Provider;
 
-class AdminUIAddressServiceProvider extends ServiceProvider
+class AdminUIAddressServiceProvider extends Provider
 {
-    /**
-     * Bootstrap the application services.
-     *
-     * @return void
-     */
-    public function boot(\Illuminate\Routing\Router $router)
-    {
-        // set schema length to prevent errors on old mysql
-        Schema::defaultStringLength(255);
+    public $viewPrefix = 'auiaddress';
+    public $dir        = __DIR__;
+    public $namespace  = __NAMESPACE__;
 
-        // load view aliases
-        Blade::include('components.address-block', 'addressBlock');
+    public function _boot(\Illuminate\Routing\Router $router)
+    {
     }
 
-    /**
-     * Register the application services.
-     *
-     * @return void
-     */
-    public function register()
+    public function _register()
     {
-        // add the facade
-        $this->app->bind('address', function($app) {
-            return new Address();
-        });
-        $this->app->bind('distance', function($app) {
-            return new Distance();
-        });
-
-        // do the publish bits
         $this->publish();
-        // do the migrations
-        $this->migrate();
-        // declare some routes
-        $this->routes();
-        // add some views
-        $this->views();
     }
 
     public function publish()
     {
+        // Publish the langage file
         $this->publishes([
-                __DIR__.'/../build/config/adminuiaddress.php' => config_path('adminuiaddress.php'),
-                __DIR__.'/Views/components' => resource_path('views/components'),
-                __DIR__.'/lang' => resource_path('lang'),
-                __DIR__.'/../build/js' => public_path('vendor/adminui/js')
-            ],
-            'adminui-address'
-        );
-    }
+            __DIR__ . '/../Publish/lang' => resource_path('/lang/')
+        ]);
 
-    public function migrate()
-    {
-        $this->loadMigrationsFrom(__DIR__.'/Database/Migrations');
-    }
+        $this->publishes([
+            __DIR__ . '/../Publish/js' => resource_path('/vendor/addresses')
+        ]);
 
-    public function routes()
-    {
-        $this->loadRoutesFrom(__DIR__.'/Routes/web.php');
-        $this->loadRoutesFrom(__DIR__.'/Routes/api.php');
-    }
+        // // Controllers Email Notifications Models provides and everting else
+        // $this->publishes([
+        //     __DIR__.'/../Publish/App' => app_path('/')
+        // ]);
 
-    public function views()
-    {
-        $this->loadViewsFrom(__DIR__.'/Views', 'auiaddressviews');
-        $this->loadViewsFrom(__DIR__.'/Views/Components', 'auiaddresscomponents');
+        // // Routes override
+        // $this->publishes([
+        //     __DIR__.'/../Publish/Routes' => base_path('/routes')
+        // ]);
+
+        // // Database migrations
+        // $this->publishes([
+        //     __DIR__.'/../Publish/Database' => database_path('/')
+        // ]);
+
+        // // Publish the docs
+        // $this->publishes([
+        //     __DIR__.'/../Publish/Docs' => base_path('/docs')
+        // ]);
+
+        // // Publish the compiled js and css to the public folder
+        // $this->publishes([
+        //     __DIR__.'/../Publish/publicFolder' => public_path('/vendor/AUIEcommerce')
+        // ]);
+
+        // // Publish the npm mix to the root folder
+        // $this->publishes([
+        //     __DIR__.'/../Publish/NpmMix/' => base_path('/')
+        // ]);
+
+        // // Config pusblish
+        // $this->publishes([
+        //     __DIR__.'/../Publish/Config/' => base_path('config/')
+        // ]);
+
+        //use php artisan vendor:publish --force
     }
 }
