@@ -1,10 +1,15 @@
 <?php
+
+use AdminUI\AdminUIAddress\Api\AddressApiController;
+use GuzzleHttp\Middleware;
+
 Route::group(
     [
-        'namespace' => 'AdminUI\AdminUIAddress\Api'
-    ], function () {
-        // address lookup
-        Route::get('address/lookup', 'AddressApiController@lookup')
-            ->name('api.address.lookup');
+        'middleware' => ['web'],
+    ],
+    function () {
+
+        // Address lookup
+        Route::post('address/lookup-poscode', [AddressApiController::class, 'lookupPostcode'])->name('address.lookup-poscode');
     }
 );
