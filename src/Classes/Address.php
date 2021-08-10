@@ -1,8 +1,10 @@
 <?php
+
 namespace AdminUI\AdminUIAddress\Classes;
 
 // Laravel 7 Http helper
 use Illuminate\Support\Facades\Http;
+
 /**
  * Helper Class to help with getAddress.io
  * This is a rewritten version of
@@ -17,7 +19,8 @@ class Address
     private $apiKey;
 
     // setup api key
-    public function __construct() {
+    public function __construct()
+    {
         $this->apiKey   = config('adminuiaddress.apiKey', '');
     }
 
@@ -64,10 +67,10 @@ class Address
         $url = self::URL;
         foreach ($data as $value) {
             if ($value) {
-                $url .= '/'.$value;
+                $url .= '/' . $value;
             }
         }
-        $url .= '?api-key='.$this->apiKey;
+        $url .= '?api-key=' . $this->apiKey;
 
         foreach ($params as $key => $param) {
             $url .= '&';

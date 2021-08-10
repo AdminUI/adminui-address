@@ -11,14 +11,14 @@ class AddressioApi
     // setup api key
     public function __construct()
     {
-        $this->apiKey     = env('GETADDRESS_API_KEY');
-        $this->apiedpoint = 'https://api.getAddress.io';
+        $this->apiKey     = config('adminuiaddress.apiKey', '');
+        $this->apiendpoint = 'https://api.getAddress.io';
     }
 
     public function find($postcode)
     {
         // assemble the url
-        $finalUrl = $this->apiedpoint . "/find/" . $postcode . "?api-key=" . $this->apiKey . '&expand=true';
+        $finalUrl = $this->apiendpoint . "/find/" . $postcode . "?api-key=" . $this->apiKey . '&expand=true';
         // using Http get a json response
         $response = Http::get($finalUrl)->json();
         // return the results

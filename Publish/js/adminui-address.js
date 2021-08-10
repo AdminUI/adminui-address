@@ -1,4 +1,3 @@
-console.log(window.Vue);
+// import Vue from "vue";
 
-window.test = "test";
-window.Vue.component("testing-this", () => import("./components/TestingThis"));
+Vue.component("testing-this", () => import("./components/TestingThis"));
