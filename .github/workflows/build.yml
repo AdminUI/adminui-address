@@ -1,0 +1,47 @@
+name: Build Javascript files
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: "0"
+
+      - name: Get specific changed files
+        id: changed-files-specific
+        uses: tj-actions/changed-files@v9.1
+        with:
+          files: |
+            .(js|vue|scss)$
+
+      - name: Run Install
+        if: steps.changed-files-specific.outputs.any_changed == 'true'
+        run: npm install
+
+      - name: Run production mix
+        if: steps.changed-files-specific.outputs.any_changed == 'true'
+        run: npx mix --mix-config=webpack.production.mix.js --production
+
+      - name: Commit changes
+        if: steps.changed-files-specific.outputs.any_changed == 'true'
+        run: |
+          git config --global user.email  "noreply@dsmdesign.co.uk"
+          git config --global user.name  "AdminUI Action"
+          git add .
+          git commit -m "Github Action compiled resources"
+          git push
+
+      - name: Bump version and push tag
+        if: ${{ always() }}
+        uses: anothrNick/github-tag-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEFAULT_BUMP: none
+          RELEASE_BRANCHES: main,master
