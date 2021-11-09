@@ -1,4 +1,5 @@
 <?php
+
 namespace AdminUI\AdminUIAddress\Api;
 
 use Address;
@@ -25,9 +26,9 @@ class AddressApiController extends Controller
         // do api request and cache the results
         cache()->clear();
         $response = cache()->remember(
-            'address'.$postcode,
+            'address' . $postcode,
             config('adminuiaddress.cacheTime'),
-            function() use ($postcode) {
+            function () use ($postcode) {
                 return json_decode(json_encode(Address::find($postcode, false, true)));
             }
         );
@@ -42,9 +43,9 @@ class AddressApiController extends Controller
                     'latitude'  => $response->latitude ?? 0,
                     'results'   => $addresses->count(),
                     'distance'  => round(Distance::between([
-                                        'lat' => $response->latitude ?? 0,
-                                        'lng' => $response->logitude ?? 0
-                                    ]), 2)
+                        'lat' => $response->latitude ?? 0,
+                        'lng' => $response->logitude ?? 0
+                    ]), 2)
                 ]
             ]);
     }
