@@ -4,7 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStatesTable extends Migration {
+class CreateStatesTable extends Migration
+{
 
 	/**
 	 * Run the migrations.
@@ -13,13 +14,14 @@ class CreateStatesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('states', function(Blueprint $table)
-		{
-			$table->increments('id');
-			$table->string('name', 255);
-			$table->string('code', 5)->nullable();
-			$table->timestamps();
-		});
+		if (!Schema::hasTable('states')) {
+			Schema::create('states', function (Blueprint $table) {
+				$table->increments('id');
+				$table->string('name', 255);
+				$table->string('code', 5)->nullable();
+				$table->timestamps();
+			});
+		}
 	}
 
 
@@ -32,5 +34,4 @@ class CreateStatesTable extends Migration {
 	{
 		Schema::drop('countries');
 	}
-
 }
